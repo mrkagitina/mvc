@@ -4,23 +4,23 @@
   <title>Edit user</title>
 </head>
 <body>
-<h1>Edit</h1>
+<h1>Edit User</h1>
 <form th:action="@{/users}" th:object="${user}" method="post">
-  <input type="hidden" th:field="id" />
+  <input type="hidden" th:field="*{id}" />
   <div>
     <label for="name">Username:</label>
-    <input type="text" id="name" th:field="username" required />
+    <input type="text" id="name" th:field="*{username}" required />
   </div>
   <div>
     <label for="age">Age:</label>
-    <input type="number" id="age" th:field="age" required />
+    <input type="number" id="age" th:field="*{age}" required />
   </div>
   <div>
     <label for="email">Email:</label>
-    <input type="email" id="email" th:field="email" required />
+    <input type="email" id="email" th:field="*{email}" required />
   </div>
   <button type="submit">Update</button>
 </form>
-<a href="/users">Back to the list</a>
+<a th:href="/users">Back to the list</a>
 </body>
 </html>

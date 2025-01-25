@@ -12,7 +12,6 @@ import java.util.List;
 @Controller
 @RequestMapping("/users")
 public class UsersController {
-
     @Autowired
     private UserService userService;
 
@@ -50,7 +49,7 @@ public class UsersController {
         return "redirect:/users";
     }
 
-    @PostMapping("/delete")
+    @GetMapping("/delete")
     public String deleteUser(@RequestParam("id") int id) {
         userService.deleteUser(id);
         return "redirect:/users";

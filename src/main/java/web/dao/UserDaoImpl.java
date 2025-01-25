@@ -22,7 +22,7 @@ public class UserDaoImpl implements UserDao {
     @Transactional
     @Override
     public void createUser(User user) {
-        entityManager.persist(user);
+        entityManager.merge(user);
         entityManager.flush();
     }
 
