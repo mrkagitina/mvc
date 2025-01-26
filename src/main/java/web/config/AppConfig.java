@@ -20,7 +20,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@PropertySource("classpath:db.properties")
+@PropertySource("classpath:resourses")
 @ComponentScan("web")
 public class AppConfig {
 
